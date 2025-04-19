@@ -13,8 +13,8 @@ img {
     opacity: 0;
     animation: fade 1s ease both;
     animation-timeline: view();
-    height: 40%;
-    width: 40%;
+    height: 70%;
+    width: 70%;
     margin: 10px;
     border-radius: 2px;
     box-shadow: 
