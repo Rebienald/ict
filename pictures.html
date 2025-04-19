@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="201a.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Audio Background (song) -->
+    <audio id="bgAudio" muted>
+        <source src="iyak.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <script>
+        // Play audio when user clicks anywhere on the page
+        document.body.addEventListener('click', function() {
+            const audio = document.getElementById('bgAudio');
+            audio.muted = false;  // Unmute audio
+            audio.play();         // Start playing audio
+        });
+    </script>
+</body>
+
+<style>
+    #bgVideo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.6; /* gives that faded feel */
+        filter: grayscale(70%) brightness(60%) contrast(85%);
+    }
+
+    /* Hide the audio player UI */
+    #bgAudio {
+        display: none;
+    }
+</style>
+</html>
